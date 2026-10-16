@@ -1,0 +1,217 @@
+/* ==================================================
+   공통 설정
+   모든 화면에서 함께 사용하는 기본 스타일입니다.
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f7f8fc;
+    color: #172033;
+    font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* ==================================================
+   헤더
+   ================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e8ef;
+}
+
+.header-inner {
+    width: calc(100% - 40px);
+    max-width: 1180px;
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.site-logo {
+    margin: 0;
+    line-height: 1;
+}
+
+.site-logo > a { display: block; }
+.site-logo img { display: block; width: 258px; height: auto; }
+.logo-bean { grid-row: 1 / 3; width: 38px; height: 38px; position: relative; display: block; background: #6c5ce7; border-radius: 48% 52% 48% 52% / 58% 44% 56% 42%; transform: rotate(-8deg); box-shadow: 0 6px 14px rgba(108,92,231,.24); }
+.logo-bean::before, .logo-bean::after { content: ""; position: absolute; top: -6px; width: 13px; height: 17px; background: #b9ff66; }
+.logo-bean::before { left: 7px; border-radius: 12px 2px 12px 2px; transform: rotate(-28deg); }.logo-bean::after { right: 5px; border-radius: 2px 12px 2px 12px; transform: rotate(28deg); }
+.logo-bean i::before, .logo-bean i::after { position: absolute; top: 10px; color: #fff; font-style: normal; font-size: 16px; font-weight: 900; transform: rotate(8deg); }
+.logo-bean i::before { content: "{"; left: 8px; }.logo-bean i::after { content: "}"; right: 8px; }
+.logo-word { font-size: 23px; font-weight: 900; letter-spacing: -1.5px; }
+.logo-word > span {
+    color: #6c5ce7;
+}
+.site-logo small { align-self: start; color: #9ba1af; font-size: 7px; font-weight: 900; letter-spacing: 2.2px; }
+
+.gnb {
+    margin-right: auto;
+}
+
+.gnb ul,
+.member-menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.gnb a,
+.member-menu a,
+.member-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.gnb a:hover,
+.member-menu a:hover {
+    color: #6c5ce7;
+}
+
+.header-write-btn {
+    padding: 9px 15px;
+    color: #fff !important;
+    background: #6c5ce7;
+    border-radius: 9px;
+}
+
+/* ==================================================
+   공통 버튼
+   ================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 9px 18px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    color: #fff;
+    background: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: #5847d6;
+}
+
+.btn-outline {
+    color: #384152;
+    background: #fff;
+    border-color: #d8dde8;
+}
+
+.btn-outline:hover {
+    color: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+/* ==================================================
+   푸터
+   ================================================== */
+
+.site-footer {
+    margin-top: 90px;
+    padding: 34px 20px;
+    color: #778094;
+    background: #fff;
+    border-top: 1px solid #e5e8ef;
+}
+
+.site-footer .footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* ==================================================
+   작은 화면
+   ================================================== */
+
+@media (max-width: 760px) {
+    .site-logo img { width: 190px; }
+    .header-inner {
+        width: calc(100% - 28px);
+        padding: 14px 0;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .site-logo {
+        margin-right: auto;
+    }
+
+    .gnb {
+        order: 3;
+        width: 100%;
+    }
+
+    .gnb ul {
+        gap: 20px;
+    }
+
+    .member-name {
+        display: none;
+    }
+
+    .site-footer .footer-inner {
+        flex-direction: column;
+    }
+}

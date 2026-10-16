@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" role="img" aria-labelledby="title desc">
+  <title id="title">KAKERU</title>
+  <desc id="desc">Code and design archive</desc>
+  <g fill="none" stroke="#6c5ce7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 17 8 36l17 19"/>
+    <path d="m79 17 17 19-17 19"/>
+  </g>
+  <path fill="#17152b" d="M37 12h9v19L65 12h12L56 34l22 26H66L46 37v23h-9z"/>
+  <path fill="#17152b" d="M82 12h7L77 60h-7z"/>
+  <rect x="58" y="30" width="8" height="8" rx="2" fill="#9eea34"/>
+  <text x="112" y="42" fill="#17152b" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="2">KAKERU</text>
+  <text x="114" y="57" fill="#73798a" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="700" letter-spacing="2.4">CODE × DESIGN</text>
+</svg>

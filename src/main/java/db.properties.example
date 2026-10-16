@@ -1,0 +1,5 @@
+# Copy this file to db.properties and enter local values.
+# db.properties is ignored by Git.
+db.url=jdbc:oracle:thin:@localhost:1521:xe
+db.user=your_username
+db.password=your_password

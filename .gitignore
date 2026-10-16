@@ -1,0 +1,19 @@
+/build/
+/ansung/
+*.class
+
+# Local secrets
+.env
+.env.*
+!.env.example
+src/main/java/db.properties
+
+# Eclipse local configuration
+.metadata/
+.settings/
+.classpath
+.project
+
+*.log
+.DS_Store
+Thumbs.db

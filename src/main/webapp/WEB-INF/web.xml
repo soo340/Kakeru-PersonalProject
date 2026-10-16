@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="true">
+
+    <display-name>KAKERU</display-name>
+
+    <servlet>
+        <servlet-name>boardController</servlet-name>
+        <servlet-class>controller.BoardController</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>boardController</servlet-name>
+        <url-pattern>/blog/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>memberController</servlet-name>
+        <servlet-class>controller.Membercontroller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>memberController</servlet-name>
+        <url-pattern>/member/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>replyController</servlet-name>
+        <servlet-class>controller.ReplyController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>replyController</servlet-name>
+        <url-pattern>/blog/reply/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>imageServlet</servlet-name>
+        <servlet-class>controller.ImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>imageServlet</servlet-name>
+        <url-pattern>/imgs/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
